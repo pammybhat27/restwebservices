@@ -1,0 +1,22 @@
+
+<div class ="container-fluid" style="width:60%">
+<table class="table table-striped" >
+  <thead>
+  <tr>
+    <th><a href (click)="sortTable('id')">ID</a></th>
+    <th><a href (click)="sortTable('name')">Name</a></th>
+    <th><a href (click)="sortTable('cost')">Cost</a></th>
+    <th><a href (click)="sortTable('quantity')">Quantity</a></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let product of products | orderpipe:path:order">
+    <td>{{ product.id }}</td>
+    <td>{{ product.name }}</td>
+    <td>{{ product.cost }}</td>
+    <td>{{ product.quantity }}</td>
+  </tr>
+  </tbody>
+</table>
+</div>
+

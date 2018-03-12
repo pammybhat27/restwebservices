@@ -1,0 +1,24 @@
+
+<div class ="container-fluid" style="width:60%">
+  <input type="text" id="searchTextId" [(ngModel)]="searchText" name="searchText" placeholder="Search By ID or Name">
+<br/>
+  <br/>
+  <table  class ="table table-striped">
+  <thead class = "table-bordered">
+<tr>
+  <td>Product ID</td>
+  <td>Name</td>
+  <td>Cost </td>
+  <td>Quantity</td>
+</tr>
+</thead>
+  <tbody>
+  <tr *ngFor="let product of products | filterproductname: searchText">
+    <td> {{product.id}} </td>
+    <td> {{product.name}} </td>
+    <td> {{product.cost}} </td>
+    <td> {{product.quantity}} </td>
+  </tr>
+  </tbody>
+</table>
+</div>
